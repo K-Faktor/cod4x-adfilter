@@ -31,12 +31,39 @@ void Q_strncpyz(char *dest, const char *src, int destsize) {
     dest[destsize - 1] = 0;
 }
 
-// Common TLDs to check for
 const char* COMMON_TLDS[] = {
-    "com", "net", "org", "edu", "gov", "mil",
-    "io", "me", "tv", "gg", "xyz", "info",
-    "biz", "online", "site", "website", "app",
-    "dev", "club", "shop", "store", "live",
+    // Classic gTLDs (generic top-level domains)
+    "com", "net", "org", "edu", "gov", "mil", "int",
+    
+    // Popular ccTLDs (country code top-level domains)
+    "io", "me", "tv", "gg", "co", "uk", "de", "fr", "ru", "cn", "jp", "us", "ca", "au", "in",
+    "br", "it", "es", "nl", "ch", "se", "no", "fi", "dk", "pl", "be", "at", "cz", "gr", "pt", 
+    "ie", "nz", "za", "mx", "ar", "kr", "sg", "hk", "tw", "th", "vn", "id", "my", "ph",
+    
+    // New gTLDs (generic top-level domains)
+    "xyz", "info", "biz", "online", "site", "website", "app", "dev", "club", "shop", "store", "live",
+    "tech", "space", "top", "pro", "name", "mobi", "asia", "cat", "jobs", "tel", "travel", "xxx",
+    "cloud", "digital", "media", "news", "blog", "email", "design", "art", "music", "video", "games",
+    "agency", "company", "group", "solutions", "services", "systems", "network", "software", "codes",
+    "ai", "ml", "bot", "crypto", "blockchain", "nft", "wallet", "finance", "bank", "capital",
+    "health", "care", "clinic", "doctor", "fitness", "yoga", "food", "coffee", "restaurant", "pizza",
+    "hotel", "tour", "vacation", "holiday", "flight", "cruise", "taxi", "car", "auto",
+    "fashion", "style", "beauty", "shoes", "jewelry", "watches", "toys", "kids", "family", "love",
+    "home", "house", "property", "estate", "rentals", "construction", "build", "repair", "tools",
+    "academy", "school", "university", "education", "courses", "training", "coach", "expert",
+    "law", "legal", "attorney", "tax", "accountant", "consulting", "management", "marketing",
+    "photo", "photography", "pictures", "gallery", "studio", "production", "works", "ventures",
+    "ltd", "llc", "inc", "gmbh", "team", "partners", "associates", "international",
+    "world", "global", "earth", "planet", "eco", "green", "energy", "solar", "wind", "power",
+    
+    // Sponsored / specialized TLDs
+    "museum", "aero", "coop", "post",
+    
+    // IDN TLDs (internationalized domain names)
+    "рф", "укр", "бг", "срб", "қаз", "мон", "ελ", "ευ", "中国", "香港", "台湾", "日本", "한국", 
+    "भारत", "ਭਾਰਤ", "ભારત", "இந்தியா", "مصر", "السعودية", "امارات", "پاکستان", "ایران", "ישראל", "ไทย", 
+    "ລາວ", "မြန်မာ", "ភ្នំពេញ", "संगठन", "ভারত", "ভাৰত",
+    
     NULL  // Terminator
 };
 
